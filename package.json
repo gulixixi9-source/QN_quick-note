@@ -1,15 +1,13 @@
 {
-  "name": "quicknote",
-  "version": "0.1.0",
-  "description": "QuickNote Windows desktop app",
+  "name": "quick-note",
+  "version": "0.2.0",
+  "description": "QUICKnote - Windows快速笔记工具",
   "main": "src/main/main.js",
-  "author": "",
-  "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "pack": "electron-builder --dir",
     "dist": "electron-builder"
   },
+  "dependencies": {},
   "devDependencies": {
     "electron": "^30.0.0",
     "electron-builder": "^24.13.3"
@@ -17,27 +15,8 @@
   "build": {
     "appId": "com.quicknote.app",
     "productName": "QUICKnote",
-    "compression": "maximum",
-    "asar": true,
-    "electronLanguages": [
-      "en-US",
-      "zh-CN"
-    ],
-    "directories": {
-      "output": "dist",
-      "buildResources": "build"
-    },
-    "files": [
-      "src/**/*",
-      "package.json"
-    ],
     "win": {
-      "target": "nsis",
-      "icon": "build/app-icon.ico"
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true
+      "target": "nsis"
     }
   }
 }
